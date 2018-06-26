@@ -1,0 +1,13 @@
+<div class="container">
+  <h4>All fields are required: &nbsp; <span id="inputErr" *ngIf="bool == true">{{ inputErr }}</span></h4>
+  <div class="form">
+    <form onsubmit="return false">
+      <input id="inputName" type="text" name="name" placeholder="Your Name: Subject">
+      <input id="inputEmail" type="text" name="email" placeholder="Your Email Address">
+      <textarea id="inputMsg" name="text" name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <button id="btn" (click)="alertInput()" type="submit">SEND</button>
+    </form>
+  </div>
+  <h5 id="msgSuccess" *ngIf="bool == false">{{ msgSuccess }}</h5>
+</div>
+<app-footer></app-footer>

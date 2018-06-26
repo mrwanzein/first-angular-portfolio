@@ -1,0 +1,65 @@
+#a {
+    margin-top: 5%;
+    text-decoration: underline;
+}
+
+#b {
+    margin-top: 42%;
+    padding-bottom: 75px;
+    text-decoration: underline;
+    position: absolute; 
+}
+
+.projectTemplate {
+    width: 510px;
+    height: 350px;
+    margin: 15px;
+}
+
+#one {
+    background: url("https://s17.postimg.cc/e8e18r5sf/Web_template.png") no-repeat;
+    background-size: contain;
+    float:left;
+}
+
+#one:hover::before {
+    content: 'A responsive template website done with flexbox (can also be done with bootstrap)';
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 1.6em;
+    color: white;
+    display: block;
+    padding: 10px;
+}    
+
+#two {
+    background: url("https://s17.postimg.cc/b43dcfeun/Wiki_viewer.png") no-repeat;
+    background-size: contain;
+    float: left;
+}
+
+#two:hover::before {
+    content: 'A search bar connected to Wikipedia\'s Api';
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 1.6em;
+    color: white;
+    display: block;
+    padding: 10px;
+    
+}
+
+#three {
+    background: url("https://s9.postimg.cc/42y9ht85r/js_calculator.png") no-repeat;
+    background-size: contain;
+    float: left;
+}
+
+#three:hover::before {
+    content: 'A calculator made with vanilla js';
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 1.6em;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+

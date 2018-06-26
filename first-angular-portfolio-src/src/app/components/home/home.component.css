@@ -1,0 +1,56 @@
+h1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  top: 200px;  
+}
+
+.btn {
+display:inline-block;
+padding: 0.5em 3em;
+border:0.16em solid rgb(0, 0, 0);
+margin:0 0.3em 0.3em 0;
+box-sizing: border-box;
+text-decoration:none;
+text-transform:uppercase;
+font-family:'Roboto',sans-serif;
+font-weight:400;
+color:rgb(0, 0, 0);
+text-align:center;
+transition: all 0.15s;
+position: relative;
+top: 600px;
+left: 455px;
+}
+
+.btn:hover {
+ color:rgb(80, 178, 235);
+ border-color:rgb(80, 178, 235);
+}
+
+.btn:active {
+color:#BBBBBB;
+border-color:#BBBBBB;
+}
+
+.msgBox {
+  background: rgba(0, 0, 0, 0.65);
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  padding: 85px;
+  padding-bottom: 65px;
+  top: 250px;
+  left: 380px;
+  text-transform: uppercase;
+  border-radius: 20%; 
+}
+
+.ion-ios-sunny {
+  color: yellow;
+  margin-left: 40%;
+  font-size: 2.5em;
+}

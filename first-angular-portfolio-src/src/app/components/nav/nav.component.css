@@ -1,0 +1,44 @@
+header {
+    background: #3b609b;
+}
+
+header::after {
+    content:'';
+    display: table;
+    clear: both;
+}
+
+#welcome {
+    float: left;
+    padding: 10px 0;
+    color: rgb(80, 178, 235);
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 120px;
+    padding-top: 14px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgb(253, 253, 253);
+    font-size: 20px;
+}
+
+ nav li :hover:not(i) {
+    color: rgb(253, 0, 0);
+}
+
