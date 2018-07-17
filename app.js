@@ -3,6 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
+const port = process.env.PORT || 3000;
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -68,6 +70,6 @@ app.post('/client-contact', (req, res) => {
 });
 
 
-app.listen(3000, () => {
-    console.log('Server is on on port 3000');
+app.listen(port, () => {
+    console.log(`Server is on on port ${port}`);
 });

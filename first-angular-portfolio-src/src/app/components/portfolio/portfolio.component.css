@@ -62,4 +62,19 @@
     padding: 10px;
 }
 
+#four {
+    background: url("https://s8.postimg.cc/7s0ilz5id/chat_app.png") no-repeat;
+    background-size: contain;
+    float: left; 
+}
+
+#four:hover::before {
+    content: 'A functional chat app made with node and socket.io';
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 1.6em;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
 
