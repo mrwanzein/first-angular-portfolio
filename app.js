@@ -41,7 +41,7 @@ app.post('/client-contact', (req, res) => {
         secure: false, // true for 465, false for other ports
         auth: {
             user: 'zeinmrwan@gmail.com', // generated ethereal user
-            pass: password // generated ethereal password
+            pass: '' // generated ethereal password
         },
         tls: {
             rejectUnauthorized: false
