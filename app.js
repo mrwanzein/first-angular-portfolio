@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const {password} = require('./password');
 
 const port = process.env.PORT || 3000;
 
@@ -39,8 +40,8 @@ app.post('/client-contact', (req, res) => {
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: '', // generated ethereal user
-            pass: '' // generated ethereal password
+            user: 'zeinmrwan@gmail.com', // generated ethereal user
+            pass: password // generated ethereal password
         },
         tls: {
             rejectUnauthorized: false

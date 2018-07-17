@@ -324,7 +324,7 @@ var ContactComponent = /** @class */ (function () {
             }, 1500);
             // http request must have return statement
             // no need to use json.stringify if you use body-parser
-            return this.http.post('http://localhost:3000/client-contact', obj).subscribe();
+            return this.http.post('https://mrwanzein.herokuapp.com/client-contact', obj).subscribe();
         }
     };
     ContactComponent = __decorate([
