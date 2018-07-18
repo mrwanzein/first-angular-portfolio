@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/index.html'));
 });
 
-app.post('/https://mrwanzein.herokuapp.com', (req, res) => {
+app.post('/client-contact', (req, res) => {
     
     const clientMsg = `
     <p> Email sent from your portfolio website</p>
@@ -39,7 +39,7 @@ app.post('/https://mrwanzein.herokuapp.com', (req, res) => {
       html: clientMsg,
     };
     
-    res.send(sgMail.send(msg));
+    res.status(200).send();
     
 });
 
