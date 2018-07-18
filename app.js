@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const helper = require('sendgrid').mail;
+const sgMail = require('@sendgrid/mail');
 
 
 const port = process.env.PORT || 3000;
@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/index.html'));
 });
 
-app.post('https://mrwanzein.herokuapp.com', (req, res) => {
+app.post('/https://mrwanzein.herokuapp.com', (req, res) => {
     
     const clientMsg = `
     <p> Email sent from your portfolio website</p>
@@ -31,20 +31,16 @@ app.post('https://mrwanzein.herokuapp.com', (req, res) => {
     <p>${req.body.message}</p>
     `;
 
-    let from_email = new helper.Email('mrwanzein@outlook.com');
-    let to_email = new helper.Email('mrwanzein@outlook.com');
-    let subject = 'Angular portfolio user mail';
-    let content = new helper.Content('text/html', clientMsg);
-    let mail = new helper.Mail(from_email, subject, to_email, content);
-
-    var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
-    var request = sg.emptyRequest({
-    method: 'POST',
-    path: '/v3/mail/send',
-    body: mail.toJSON(),
-    });
-
-    res.send(request);
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    const msg = {
+      to: 'mrwanzein@outlook.com',
+      from: 'mrwanzein@outlook.com',
+      subject: 'Angular portfolio form user response',
+      html: clientMsg,
+    };
+    
+    res.send(sgMail.send(msg));
+    
 });
 
 
