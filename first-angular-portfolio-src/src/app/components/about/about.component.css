@@ -4,6 +4,12 @@
     text-align: justify;
 }
 
+.container {
+    background: #fffef4;
+    box-shadow: 0px 6px 5px 3px #999999;
+    padding-bottom: 110px;
+}
+
 .ion-android-star {
     color: red;
     font-size: 1.3em;
