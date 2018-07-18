@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  alertInput() {
+  sendMail() {
     var name = <HTMLInputElement>document.getElementById('inputName'),
         email = <HTMLInputElement>document.getElementById('inputEmail'),
         msg = <HTMLInputElement>document.getElementById('inputMsg');
@@ -46,7 +46,7 @@ export class ContactComponent implements OnInit {
 
        // http request must have return statement
        // no need to use json.stringify if you use body-parser
-      return this.http.post('https://mrwanzein.herokuapp.com', obj).subscribe();
+      return this.http.post('https://mrwanzein.herokuapp.com/client-contact', obj).subscribe();
      }
   }
 

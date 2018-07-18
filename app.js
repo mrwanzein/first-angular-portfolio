@@ -39,7 +39,7 @@ app.post('/client-contact', (req, res) => {
       html: clientMsg,
     };
     
-    res.status(200).send();
+    res.send(sgMail.send(msg));
     
 });
 

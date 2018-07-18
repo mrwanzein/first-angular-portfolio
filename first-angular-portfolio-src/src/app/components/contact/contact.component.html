@@ -6,7 +6,7 @@
       <input id="inputName" type="text" name="name" placeholder="Your Name and subject of the message" autocomplete="off">
       <input id="inputEmail" type="text" name="email" placeholder="Your Email Address" autocomplete="off">
       <textarea id="inputMsg" name="text" name="message" cols="30" rows="10" placeholder="Your Message" autocomplete="off"></textarea>
-      <button id="btn" (click)="alertInput()" type="submit">SEND</button>
+      <button id="btn" (click)="sendMail()" type="submit">SEND</button>
     </form>
   </div>
   <h5 id="msgSuccess" *ngIf="bool == false">{{ msgSuccess }}</h5>
