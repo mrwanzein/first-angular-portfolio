@@ -39,9 +39,11 @@ app.post('/client-contact', (req, res) => {
       html: clientMsg,
     };
     
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.send(sgMail.send(msg));
+    sgMail.send(msg, (err) => {
+        if (err) {
+            console.log(err);
+        }
+    });
     
 });
 
