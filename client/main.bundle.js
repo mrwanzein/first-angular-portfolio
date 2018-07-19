@@ -270,7 +270,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/contact/contact.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <h2>Want to get in touch? Send me an email directly via this form.</h2>\n  <h4>All fields are required: &nbsp; <span id=\"inputErr\" *ngIf=\"bool == true\">{{ inputErr }}</span></h4>\n  <div class=\"form\">\n    <form onsubmit=\"return false\">\n      <input id=\"inputName\" type=\"text\" name=\"name\" placeholder=\"Your Name and subject of the message\" autocomplete=\"off\">\n      <input id=\"inputEmail\" type=\"text\" name=\"email\" placeholder=\"Your Email Address\" autocomplete=\"off\">\n      <textarea id=\"inputMsg\" name=\"text\" name=\"message\" cols=\"30\" rows=\"10\" placeholder=\"Your Message\" autocomplete=\"off\"></textarea>\n      <button id=\"btn\" (click)=\"alertInput()\" type=\"submit\">SEND</button>\n    </form>\n  </div>\n  <h5 id=\"msgSuccess\" *ngIf=\"bool == false\">{{ msgSuccess }}</h5>\n</div>\n\n<app-footer></app-footer>\n"
+module.exports = "<div class=\"container\">\n  <h2>Want to get in touch? Send me an email directly via this form.</h2>\n  <h4>All fields are required: &nbsp; <span id=\"inputErr\" *ngIf=\"bool == true\">{{ inputErr }}</span></h4>\n  <div class=\"form\">\n    <form onsubmit=\"return false\">\n      <input id=\"inputName\" type=\"text\" name=\"name\" placeholder=\"Your Name and subject of the message\" autocomplete=\"off\">\n      <input id=\"inputEmail\" type=\"text\" name=\"email\" placeholder=\"Your Email Address\" autocomplete=\"off\">\n      <textarea id=\"inputMsg\" name=\"text\" name=\"message\" cols=\"30\" rows=\"10\" placeholder=\"Your Message\" autocomplete=\"off\"></textarea>\n      <button id=\"btn\" (click)=\"sendMail()\" type=\"submit\">SEND</button>\n    </form>\n  </div>\n  <h5 id=\"msgSuccess\" *ngIf=\"bool == false\">{{ msgSuccess }}</h5>\n</div>\n\n<app-footer></app-footer>\n"
 
 /***/ }),
 
@@ -303,7 +303,7 @@ var ContactComponent = /** @class */ (function () {
     }
     ContactComponent.prototype.ngOnInit = function () {
     };
-    ContactComponent.prototype.alertInput = function () {
+    ContactComponent.prototype.sendMail = function () {
         var name = document.getElementById('inputName'), email = document.getElementById('inputEmail'), msg = document.getElementById('inputMsg');
         var obj = {
             name: name.value,
@@ -324,7 +324,7 @@ var ContactComponent = /** @class */ (function () {
             }, 1500);
             // http request must have return statement
             // no need to use json.stringify if you use body-parser
-            return this.http.post('https://mrwanzein.herokuapp.com', obj).subscribe();
+            return this.http.post('https://mrwanzein.herokuapp.com/client-contact', obj).subscribe();
         }
     };
     ContactComponent = __decorate([
