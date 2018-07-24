@@ -86,7 +86,7 @@ border-color:#BBBBBB;
 
 }
 
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 600px) {
   
   h1 {
     top: 70px;
@@ -95,13 +95,13 @@ border-color:#BBBBBB;
   .msgBox {
     left: 20%;
     padding: 15px;
-    top: 90%;
+    top: 120%;
   }
 
   .btn {
     left: 21%;
-    top: 130%;
-    margin-bottom: 40px;
+    top: 180%;
+    margin-bottom: 50px;
   }
 
 }
