@@ -86,4 +86,23 @@ border-color:#BBBBBB;
 
 }
 
+@media screen and (max-height: 500px) {
+  
+  h1 {
+    top: 100px;
+  }
+  
+  .msgBox {
+    left: 20%;
+    padding: 15px;
+    top: 126%;
+  }
+
+  .btn {
+    left: 21%;
+    top: 170%;
+  }
+
+}
+
 
