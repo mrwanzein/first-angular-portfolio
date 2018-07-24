@@ -1,6 +1,5 @@
 .footer {
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     background-color: lightgrey;
@@ -9,6 +8,7 @@
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 0.7em;
+    display: block;
  }
 
  .ion-social-github {
