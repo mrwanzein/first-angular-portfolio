@@ -95,13 +95,13 @@ border-color:#BBBBBB;
   .msgBox {
     left: 20%;
     padding: 15px;
-    top: 120%;
+    top: 130%;
   }
 
   .btn {
     left: 21%;
-    top: 180%;
-    margin-bottom: 50px;
+    top: 200%;
+    margin-bottom: 80px;
   }
 
 }
