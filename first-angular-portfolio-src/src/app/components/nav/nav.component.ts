@@ -14,4 +14,13 @@ export class NavComponent implements OnInit {
     
   }
 
+  display() {
+    let x = <HTMLInputElement>document.getElementById("responsive-nav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+  }
+
 }

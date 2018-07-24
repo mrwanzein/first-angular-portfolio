@@ -1,9 +1,17 @@
-body {
-  
-  background: url('https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg?cs=srgb&dl=adventure-alpine-background-355770.jpg&fm=jpg') center no-repeat;
-  height: 900px;
-  background-size: contain;
-  margin-top: -10px;
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 h1 {
@@ -29,9 +37,9 @@ font-weight:400;
 color:rgb(0, 0, 0);
 text-align:center;
 transition: all 0.15s;
-position: relative;
-top: 600px;
-left: 455px;
+position: absolute;
+top: 80%;
+left: 43.8%;
 }
 
 .btn:hover {
@@ -48,11 +56,11 @@ border-color:#BBBBBB;
   background: rgba(0, 0, 0, 0.65);
   color: rgb(255, 255, 255);
   display: inline-block;
-  position: relative;
+  position: absolute;
   padding: 85px;
   padding-bottom: 65px;
-  top: 250px;
-  left: 380px;
+  top: 45%;
+  left: 40%;
   text-transform: uppercase;
   border-radius: 20%; 
 }
@@ -61,6 +69,21 @@ border-color:#BBBBBB;
   color: yellow;
   margin-left: 40%;
   font-size: 2.5em;
+}
+
+@media screen and (max-width: 315px) {
+
+  .msgBox {
+    left: 10%;
+    padding: 45px;
+    padding-bottom: 25px;
+    top: 50%;
+  }
+
+  .btn {
+    left: 21%;
+  }
+
 }
 
 

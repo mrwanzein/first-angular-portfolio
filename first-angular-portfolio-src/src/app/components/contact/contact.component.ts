@@ -20,11 +20,11 @@ export class ContactComponent implements OnInit {
   }
 
   sendMail() {
-    var name = <HTMLInputElement>document.getElementById('inputName'),
+    let name = <HTMLInputElement>document.getElementById('inputName'),
         email = <HTMLInputElement>document.getElementById('inputEmail'),
         msg = <HTMLInputElement>document.getElementById('inputMsg');
 
-    var obj = {
+    let obj = {
       name: name.value,
       email: email.value,
       message: msg.value
